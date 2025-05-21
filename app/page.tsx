@@ -3,7 +3,7 @@ import Topbar from "@/components/topbar";
 
 const page = () => {
   return (
-    <div className="bg-white h-screen sm:h-full pt-5">
+    <div className="bg-white h-auto pb-1 pt-5 font-inter">
       <Navbar />
       <Topbar />
     </div>
