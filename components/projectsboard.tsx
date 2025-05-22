@@ -104,7 +104,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
       </motion.div>
       <motion.div
         {...TitleLeft}
-        className="text-2xl sm:text-6xl text-[#363636]"
+        className="text-2xl sm:text-6xl text-[#363636] font-bold"
       >
         {title}
       </motion.div>

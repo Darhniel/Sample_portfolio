@@ -106,14 +106,15 @@ const Projectpic = (props: ProjectImagesProps) => {
           key={index}
           className={`${
             id === "vynt" ? "bg-[#BDBDBD]" : "bg-white"
-          } flex justify-center h-auto p-4 md:w-11/12 border border-[#00000033] rounded-xl`}
+          } flex justify-center h-auto p-4 sm:p-8 md:w-11/12 border border-[#00000033] rounded-xl`}
         >
           <Image
-            width={400}
-            height={400}
+            width={1261.48}
+            height={717}
             src={img}
             alt={` ${id} Project Image`}
-            className="rounded-lg shadow-lg object-contain w-full"
+            style={{ objectFit: "inherit" }}
+            className="rounded-lg shadow-lg w-full"
           />
         </motion.div>
       ))}

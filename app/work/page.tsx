@@ -1,6 +1,7 @@
 "use client";
 import MyWorks from "@/components/myworks";
 import { motion } from "motion/react";
+import Contact from "../../components/contact";
 
 const moveLeft = {
   initial: { opacity: 0, x: 60 },
@@ -15,12 +16,13 @@ const Page = () => {
         className="flex flex-col justify-center items-center gap-3"
       >
         <div className="text-[#363636] text-sm">Recent Projects</div>
-        <div className="text-[#CFCFCF] text-3xl sm:text-4xl md:text-6xl">
+        <div className="text-[#CFCFCF] text-3xl sm:text-4xl md:text-6xl font-bold tracking-[-0.25rem]">
           MY WORK
         </div>
       </motion.div>
       <div>
         <MyWorks />
+        <Contact/>
       </div>
     </div>
   );

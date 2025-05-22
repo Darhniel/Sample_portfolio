@@ -1,5 +1,5 @@
 "use client";
-import { motion} from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -19,6 +19,7 @@ interface MyWorksProps {
   description: string;
   name: string;
   id: string;
+  width?: number;
 }
 const Workslist: MyWorksProps[] = [
   {
@@ -26,74 +27,83 @@ const Workslist: MyWorksProps[] = [
     image: "/voya.png",
     description: "Mobile App Design",
     name: "VOYA",
+    width: 484.68,
   },
   {
     id: "orthorus",
     image: "/orthorus.png",
     description: "Web App Design/Dashboard Design",
     name: "Orthorus",
+    width:477,
   },
   {
     id: "vynt",
     image: "/vynt.png",
     description: "Mobile App Design",
     name: "VYNT",
+    width:484.68,
   },
   {
     id: "creatorwire",
     image: "/creatorwire.png",
     description: "Web Design",
     name: "Creator Wire",
+    width: 512.65,
   },
   {
     id: "reeka",
     image: "/reeka.png",
     description: "Mobile App Design",
     name: "Reeka",
+    width: 527.53,
   },
   {
     id: "ajoin",
     image: "/ajoin.png",
     description: "Mobile App Design",
     name: "Ajoin",
+    width: 484.68,
   },
   {
     id: "reekadeck",
     image: "/reekadeck.png",
     description: "Pitch Deck Design",
     name: "Reeka (Deck)",
+    width:528,
   },
 ];
 
 const MyWorks = () => {
   const router = useRouter();
 
+  // Handle Click on Images
   const handleClick = (id: string) => {
     const lowerId = id.toLowerCase();
     router.push(`/work/${lowerId}`);
   };
   return (
-    <div className="sm:pb-12 pb-9">
-      <div className="w-[86%] m-auto flex flex-row flex-wrap justify-center items-center md:grid md:grid-cols-2 gap-9 md:gap-x-12 md:gap-y-5 mt-5">
+    <div className="sm:pb-12 pb-9 lg:mx-19 m-auto w-[86%] lg:w-auto">
+      <div className=" w-full m-auto flex flex-col justify-center items-center lg:grid lg:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
         {Workslist.map((work, index) => {
-          const { image, description, name, id } = work;
+          const { image, description, name, id, width } = work;
           return (
             <div
               key={index}
               className="flex flex-col self-start gap-2 sm:gap-4"
             >
+              {/* Image Div */}
               <motion.div
                 {...imageUp}
                 onClick={() => handleClick(id)}
-                className="flex justify-center items-center px-10 md:px-10 sm:w-auto h-56 sm:h-96 md:h-auto md:py-10 py-6 rounded-2xl border-[0.1px] border-[#CFCFCF]"
+                className="flex justify-center items-center border-[0.5px] p-4 md:p-0 m-auto sm:w-auto md:w-[600px] md:h-[480px] border-[#CFCFCF] rounded-2xl"
               >
                 <Image
                   src={image}
                   alt={description}
-                  width={0}
-                  height={0}
-                  sizes="(max-width: 640px) 200px, 400px"
-                  className="w-full h-full object-contain"
+                  width={width}
+                  height={341}
+                  style={{ objectFit: "inherit" }}
+                  className="sm:max-w-[500px] sm:max-h-[341px] "
                 />
               </motion.div>
               <motion.div {...nameScale} className="flex flex-col">

@@ -2,18 +2,8 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 
-const firstImage = {
-  initial: { opacity: 0.5, x: -30 },
-  animate: { opacity: 1, x: 0 },
-  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
-};
-const secondImage = {
-  initial: { opacity: 0.5, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
-};
-const thirdImage = {
-  initial: { opacity: 0.5, x: 30 },
+const imageSlide = {
+  initial: { opacity: 0.5, x: 400 },
   animate: { opacity: 1, x: 0 },
   transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
 };
@@ -22,79 +12,45 @@ export default function Carousel() {
   const images = [
     { src: "/voyasplash.png", alt: "Android Device Style" },
     { src: "/leaplearners.png", alt: "Large Center Image" },
-    { src: "/orthro.png", alt: "Cut Off Right Side" },
+    { src: "/orthorus.png", alt: "Cut Off Right Side" },
   ];
 
   return (
-    <div className="relative w-full max-w-full md:max-w-5xl mx-auto my-6 md:my-12 overflow-hidden">
-      <div className="flex sm:gap-10 h-64 sm:h-80 md:h-96 relative pl-0">
+    <div className="mt-10 mb-8">
+      <motion.div
+        {...imageSlide}
+        className="flex flex-row ml-5 sm:ml-20 gap-1 max-h-[400px] sm:max-h-[574px] overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-scrollbar]:hidden"
+      >
         {/* First Image */}
-        <motion.div
-          {...firstImage}
-          className="flex-shrink-0 w-1/3 md:w-1/4 pl-0 h-full"
-        >
-          <div className="h-full w-full flex items-center justify-center">
-            <div className="relative h-full w-full">
-              <div className="absolute inset-2 rounded-2xl overflow-hidden bg-white">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={images[0].src}
-                    alt={images[0].alt}
-                    fill
-                    sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 25vw"
-                    style={{ objectFit: "cover" }}
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <Image
+          src={images[0].src}
+          alt={images[0].alt}
+          width={264.77}
+          height={574}
+          style={{ objectFit: "inherit" }}
+          className="max-w-[125px] sm:max-w-[264.77px]"
+        />
 
         {/* Middle Image */}
-        <motion.div
-          {...secondImage}
-          className="flex-shrink-0 w-1/2 z-10 scale-105 md:scale-110 h-full"
-        >
-          <div className="h-full w-full flex items-center justify-center px-1 sm:px-2">
-            <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <Image
-                src={images[1].src}
-                alt={images[1].alt}
-                fill
-                sizes="(max-width: 640px) 50vw, 50vw"
-                style={{
-                  objectFit: "cover",
-                  borderRadius: "0.75rem",
-                }}
-                priority
-              />
-            </div>
-          </div>
-        </motion.div>
+        <Image
+          src={images[1].src}
+          alt={images[1].alt}
+          width={884}
+          height={574}
+          style={{ objectFit: "inherit" }}
+          className="max-w-[400px] sm:max-w-[884px]"
+        />
 
         {/* Last Image */}
-        <motion.div
-          {...thirdImage}
-          className="flex-shrink-0 w-1/3 md:w-1/4 -mr-8 sm:-mr-10 md:-mr-12 relative overflow-hidden h-full"
-        >
-          <div className="h-full w-full flex items-center justify-center px-1 sm:px-2 relative">
-            <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <Image
-                src={images[2].src}
-                alt={images[2].alt}
-                fill
-                sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 25vw"
-                style={{
-                  objectFit: "cover",
-                  borderRadius: "0.75rem",
-                }}
-              />
-            </div>
-            <div className="absolute right-0 top-0 h-full w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent to-white"></div>
-          </div>
-        </motion.div>
-      </div>
+        <Image
+          src={images[2].src}
+          alt={images[2].alt}
+          width={883.8}
+          height={574}
+          style={{ objectFit: "inherit" }}
+          className="max-w-[400px] sm:max-w-[883.8px]"
+        />
+      </motion.div>
     </div>
   );
 }
