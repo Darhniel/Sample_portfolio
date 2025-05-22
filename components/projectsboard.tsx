@@ -3,12 +3,25 @@
 import { FC } from "react";
 import { useParams } from "next/navigation";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
+import { motion } from "motion/react";
 interface ProjectsboardProps {
   button: string[];
   title: string;
   description: string;
   id?: string;
 }
+
+const buttonScale = {
+  initial: { opacity: 0, scale: 0.5 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
+};
+const TitleLeft = {
+  initial: { opacity: 0, x: 30 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
+};
+
 const Projectsboardlist: ProjectsboardProps[] = [
   {
     id: "voya",
@@ -79,18 +92,28 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
   const { button, title, description, id } = props;
   return (
     <div className="flex flex-col gap-6 mt-6 mx-5 md:mx-8 md:w-4/5 lg:mx-10 lg:w-1/2">
-      <div className="flex flex-row gap-2 py-2">
+      <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
         {button.map((item, index) => (
           <button
             key={index}
-            className="bg-[#CFCFCF] text-[#F6F6F6] rounded-full px-3 py-1 text-xs font-medium"
+            className="bg-[#CFCFCF] text-[#F6F6F6] rounded-full px-2 sm:px-3 py-1 text-xs font-medium"
           >
             {item}
           </button>
         ))}
-      </div>
-      <div className="text-2xl sm:text-6xl text-[#363636]">{title}</div>
-      <div className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 font-medium">{description}</div>
+      </motion.div>
+      <motion.div
+        {...TitleLeft}
+        className="text-2xl sm:text-6xl text-[#363636]"
+      >
+        {title}
+      </motion.div>
+      <motion.div
+        {...TitleLeft}
+        className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 font-medium"
+      >
+        {description}
+      </motion.div>
       {id === "creatorwire" && (
         <button className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]">
           <p>Visit Website</p>

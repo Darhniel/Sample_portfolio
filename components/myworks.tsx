@@ -1,6 +1,18 @@
 "use client";
+import { motion} from "motion/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
+const imageUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
+};
+const nameScale = {
+  initial: { opacity: 0, scale: 0.3 },
+  whileInView: { opacity: 1, scale: 1 },
+  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
+};
 
 interface MyWorksProps {
   image: string;
@@ -66,8 +78,12 @@ const MyWorks = () => {
         {Workslist.map((work, index) => {
           const { image, description, name, id } = work;
           return (
-            <div key={index} className="flex flex-col self-start gap-2 sm:gap-4">
-              <div
+            <div
+              key={index}
+              className="flex flex-col self-start gap-2 sm:gap-4"
+            >
+              <motion.div
+                {...imageUp}
                 onClick={() => handleClick(id)}
                 className="flex justify-center items-center px-10 md:px-10 sm:w-auto h-56 sm:h-96 md:h-auto md:py-10 py-6 rounded-2xl border-[0.1px] border-[#CFCFCF]"
               >
@@ -79,11 +95,15 @@ const MyWorks = () => {
                   sizes="(max-width: 640px) 200px, 400px"
                   className="w-full h-full object-contain"
                 />
-              </div>
-              <div className="flex flex-col">
-                <p className="text-[#808080] sm:text-sm text-xs font-normal">{description}</p>
-                <p className="text-[#363636] font-medium sm:text-[20px]">{name}</p>
-              </div>
+              </motion.div>
+              <motion.div {...nameScale} className="flex flex-col">
+                <p className="text-[#808080] sm:text-sm text-xs font-normal">
+                  {description}
+                </p>
+                <p className="text-[#363636] font-medium sm:text-[20px]">
+                  {name}
+                </p>
+              </motion.div>
             </div>
           );
         })}

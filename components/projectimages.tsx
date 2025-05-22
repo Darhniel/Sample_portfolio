@@ -1,11 +1,17 @@
 "use client";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 interface ProjectImagesProps {
   id: string;
   image: string[];
 }
+const imageUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
+};
 
 const Images: ProjectImagesProps[] = [
   {
@@ -90,12 +96,18 @@ const Projectimages = () => {
   );
 };
 
-const Projectpic = ( props : ProjectImagesProps) => {
+const Projectpic = (props: ProjectImagesProps) => {
   const { image, id } = props;
   return (
     <div className="flex flex-col gap-5 md:gap-8 px-5 sm:px-10 m-auto mt-12 mb-10 sm:mb-20">
       {image.map((img, index) => (
-        <div key={index} className={`${ id === "vynt" ? "bg-[#BDBDBD]" : "bg-white"} flex justify-center h-auto p-4 md:w-11/12 border border-[#00000033] rounded-xl`}>
+        <motion.div
+          {...imageUp}
+          key={index}
+          className={`${
+            id === "vynt" ? "bg-[#BDBDBD]" : "bg-white"
+          } flex justify-center h-auto p-4 md:w-11/12 border border-[#00000033] rounded-xl`}
+        >
           <Image
             width={400}
             height={400}
@@ -103,7 +115,7 @@ const Projectpic = ( props : ProjectImagesProps) => {
             alt={` ${id} Project Image`}
             className="rounded-lg shadow-lg object-contain w-full"
           />
-        </div>
+        </motion.div>
       ))}
     </div>
   );
