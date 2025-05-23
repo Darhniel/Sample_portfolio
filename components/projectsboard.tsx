@@ -93,7 +93,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex max-w-screen items-start">
-        <div className="flex flex-col md:max-w-1/2 md:ml-10 gap-6">
+        <div className="flex flex-col md:max-w-1/2 md:ml-10 gap-6 mx-5 sm:mx-0">
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
             {button.map((item, index) => (
               <button
