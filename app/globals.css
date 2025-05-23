@@ -11,6 +11,8 @@
   --font-inter: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-sans: var(--font-geist-sans);
+  --breakpoint-custom1: 1027px;
+  --breakpoint-custom2: 1347px;
 }
 
 @media (prefers-color-scheme: dark) {

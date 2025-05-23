@@ -84,7 +84,8 @@ const MyWorks = () => {
   return (
     <div className="sm:pb-12 pb-9 lg:mx-19 m-auto w-[86%] lg:w-auto flex justify-center items-center">
       <div className="">
-        <div className=" w-full m-auto flex flex-col justify-center items-center lg:grid lg:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
+        {/* i used a custom width */}
+        <div className=" w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
           {Workslist.map((work, index) => {
             const { image, description, name, id, width } = work;
             return (
