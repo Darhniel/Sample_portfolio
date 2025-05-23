@@ -20,7 +20,7 @@ const Page = () => {
           MY WORK
         </div>
       </motion.div>
-      <div>
+      <div className="">
         <MyWorks />
         <Contact/>
       </div>

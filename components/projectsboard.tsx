@@ -91,9 +91,9 @@ const ProjectBoard = () => {
 const Projectsboard: FC<ProjectsboardProps> = (props) => {
   const { button, title, description, id } = props;
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mt-10">
       <div className="flex max-w-screen items-start">
-        <div className="flex flex-col md:max-w-1/2 md:ml-10 gap-6 mx-5 sm:mx-0">
+        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[52] gap-6 mx-5 sm:mx-0">
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
             {button.map((item, index) => (
               <button
@@ -106,13 +106,13 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="text-2xl sm:text-6xl text-[#363636] font-bold"
+            className="text-2xl sm:text-6xl text-[#363636] font-bold lg:tracking-[-0.1rem]"
           >
             {title}
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 font-medium"
+            className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 font-medium lg:tracking-[-0.02rem]"
           >
             {description}
           </motion.div>
