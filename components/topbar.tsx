@@ -49,7 +49,7 @@ const Topbar = () => {
           href="mailto:Olojodaniel99@gmail.com"
           className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:py-3 px-6 py-2 rounded-4xl text-sm"
         >
-          work with me
+          Work with me
         </motion.a>
       </div>
 

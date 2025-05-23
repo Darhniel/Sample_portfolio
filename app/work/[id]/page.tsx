@@ -1,17 +1,21 @@
-"use client"
+"use client";
 import ProjectBoard from "@/components/projectsboard";
 import Navbar from "@/components/navbar";
 import Projectimages from "@/components/projectimages";
 import { useParams } from "next/navigation";
 
 const Page = () => {
-    const params = useParams();
-    const id = params?.id as string | undefined;
+  const params = useParams();
+  const id = params?.id as string | undefined;
   return (
-    <div className={`${id=== "reeka" ? "bg-[#F0F0F0]":"bg-white"} h-auto pb-1 pt-5 font-inter`}>
+    <div
+      className={`${
+        id === "reeka" ? "bg-[#F0F0F0]" : "bg-white"
+      } min-h-screen pb-1 pt-5 font-inter`}
+    >
       <Navbar />
-      <ProjectBoard/>
-      <Projectimages/>
+      <ProjectBoard />
+      <Projectimages />
     </div>
   );
 };

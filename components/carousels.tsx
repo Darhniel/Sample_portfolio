@@ -16,7 +16,7 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="mt-10 mb-8">
+    <div className="mt-10 mb-8 flex flex-row justify-center items-center">
       <motion.div
         {...imageSlide}
         className="flex flex-row ml-5 sm:ml-20 gap-1 max-h-[400px] sm:max-h-[574px] overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-scrollbar]:hidden"

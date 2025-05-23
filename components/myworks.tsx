@@ -34,14 +34,14 @@ const Workslist: MyWorksProps[] = [
     image: "/orthorus.png",
     description: "Web App Design/Dashboard Design",
     name: "Orthorus",
-    width:477,
+    width: 477,
   },
   {
     id: "vynt",
     image: "/vynt.png",
     description: "Mobile App Design",
     name: "VYNT",
-    width:484.68,
+    width: 484.68,
   },
   {
     id: "creatorwire",
@@ -69,7 +69,7 @@ const Workslist: MyWorksProps[] = [
     image: "/reekadeck.png",
     description: "Pitch Deck Design",
     name: "Reeka (Deck)",
-    width:528,
+    width: 528,
   },
 ];
 
@@ -82,41 +82,43 @@ const MyWorks = () => {
     router.push(`/work/${lowerId}`);
   };
   return (
-    <div className="sm:pb-12 pb-9 lg:mx-19 m-auto w-[86%] lg:w-auto">
-      <div className=" w-full m-auto flex flex-col justify-center items-center lg:grid lg:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
-        {Workslist.map((work, index) => {
-          const { image, description, name, id, width } = work;
-          return (
-            <div
-              key={index}
-              className="flex flex-col self-start gap-2 sm:gap-4"
-            >
-              {/* Image Div */}
-              <motion.div
-                {...imageUp}
-                onClick={() => handleClick(id)}
-                className="flex justify-center items-center border-[0.5px] p-4 md:p-0 m-auto sm:w-auto md:w-[600px] md:h-[480px] border-[#CFCFCF] rounded-2xl"
+    <div className="sm:pb-12 pb-9 lg:mx-19 m-auto w-[86%] lg:w-auto flex justify-center items-center">
+      <div className="">
+        <div className=" w-full m-auto flex flex-col justify-center items-center lg:grid lg:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
+          {Workslist.map((work, index) => {
+            const { image, description, name, id, width } = work;
+            return (
+              <div
+                key={index}
+                className=" flex flex-col items-start self-start gap-2 sm:gap-4 sm:max-w-[600px] lg:justify-start lg:items-start"
               >
-                <Image
-                  src={image}
-                  alt={description}
-                  width={width}
-                  height={341}
-                  style={{ objectFit: "inherit" }}
-                  className="sm:max-w-[500px] sm:max-h-[341px] "
-                />
-              </motion.div>
-              <motion.div {...nameScale} className="flex flex-col">
-                <p className="text-[#808080] sm:text-sm text-xs font-normal">
-                  {description}
-                </p>
-                <p className="text-[#363636] font-medium sm:text-[20px]">
-                  {name}
-                </p>
-              </motion.div>
-            </div>
-          );
-        })}
+                {/* Image Div */}
+                <motion.div
+                  {...imageUp}
+                  onClick={() => handleClick(id)}
+                  className=" flex justify-center items-center border-[0.5px] p-4 md:p-0 m-auto sm:w-auto md:w-[600px] md:h-[480px] border-[#CFCFCF] rounded-2xl"
+                >
+                  <Image
+                    src={image}
+                    alt={description}
+                    width={width}
+                    height={341}
+                    style={{ objectFit: "inherit" }}
+                    className="sm:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
+                  />
+                </motion.div>
+                <motion.div {...nameScale} className="flex flex-col">
+                  <p className="text-[#808080] sm:text-sm text-xs font-normal">
+                    {description}
+                  </p>
+                  <p className="text-[#363636] font-medium sm:text-[20px]">
+                    {name}
+                  </p>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
