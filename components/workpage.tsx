@@ -1,16 +1,33 @@
 "use client";
 import MyWorks from "@/components/myworks";
 import { motion } from "motion/react";
-import Contact from "../../components/contact";
+import Contact from "./contact";
+import { useEffect } from "react";
 
 const moveLeft = {
   initial: { opacity: 0, x: 60 },
   animate: { opacity: 1, x: 0 },
   transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
 };
-const Page = () => {
+const Workpage = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const element = document.getElementById(
+        window.location.hash.substring(1)
+      );
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100); // Small delay to ensure page is loaded
+      }
+    }
+  }, []);
+
   return (
-    <div className="bg-white h-auto pt-5 font-medium font-inter">
+    <div id="work" className="bg-white h-auto pt-5 font-medium font-inter">
       <motion.div
         {...moveLeft}
         className="flex flex-col justify-center items-center gap-3"
@@ -22,9 +39,9 @@ const Page = () => {
       </motion.div>
       <div className="">
         <MyWorks />
-        <Contact/>
+        <Contact />
       </div>
     </div>
   );
 };
-export default Page;
+export default Workpage;
