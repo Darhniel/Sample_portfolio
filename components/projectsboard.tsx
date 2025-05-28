@@ -28,49 +28,49 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System"],
     title: "VOYA — The app that solves all your mobility issues within Africa",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "This all-in-one mobility and lifestyle app helps users navigate visa applications, book private daily rides, access personalized client services, and enjoy luxury boat cruises, delivering seamless convenience for business and leisure needs",
   },
   {
     id: "orthorus",
     button: ["Product Design", "Design System", "Dashboard"],
-    title: "ORTHORUS — The app that solves all your mobility issues within",
+    title: "ORTHORUS — Raise Capital & Run Investor Ops in One Platform",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A streamlined web platform for startups and investment managers to efficiently raise capital and manage investor operations, from fundraising campaigns to reporting and compliance.",
   },
   {
     id: "vynt",
     button: ["Product Design", "Design System"],
-    title: "VNYT — The app that solves all your mobility issues within Africa",
+    title: "VNYT — A Thrift Fashion Marketplace",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "An intuitive app designed for fashion enthusiasts to discover, buy, and sell pre-loved clothing and accessories, promoting sustainable style through the art of thrifting.",
   },
   {
     id: "creatorwire",
     button: ["Product Design"],
     title: "CREATORWIRE — The app that solves all your mobility issues within",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "This is a website that showacses the solutions provided to the payment issues that arises btween Agencies, Brands and Creators",
   },
   {
     id: "reeka",
     button: ["Product Design", "Design System"],
-    title: "REEKA — The app that solves all your mobility issues within",
+    title: "REEKA — A Web Based Application that Manages Housing and Tenancy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A comprehensive web-based platform that simplifies property management, helping landlords and housing providers track tenants, manage leases, handle payments, and streamline communication, all in one place.",
   },
   {
     id: "ajoin",
     button: ["Product Design", "Design System"],
-    title: "AJOIN — The app that solves all your mobility issues within Africa",
+    title: "AJOIN — A Sporting Community that brings together People, Places and Equipment",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A user-friendly app designed to help sports enthusiasts easily discover nearby sporting equipment rentals and book local arenas, making it simple to gear up and get active wherever they are.",
   },
   {
     id: "reekadeck",
     button: ["Deck Design", "Design System"],
-    title: "REEKA DECK — The app that solves all your mobility issues within",
+    title: "REEKA PITCH DECK",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A pitch deck outlining the challenges faced by the real estate industry, presenting Reeka’s solution to streamline property management and enhance tenant experience, and detailing Reeka’s step-by-step implementation plan for these solutions.",
   },
 ];
 const ProjectBoard = () => {
@@ -93,7 +93,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
   return (
     <div className="flex flex-col justify-center items-center mt-10">
       <div className="flex max-w-screen items-start">
-        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[52] gap-6 mx-5 sm:mx-0">
+        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[42] gap-6 mx-5 sm:mx-0">
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
             {button.map((item, index) => (
               <button
@@ -106,13 +106,13 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="text-2xl sm:text-6xl text-[#363636] font-bold lg:tracking-[-0.1rem]"
+            className="text-2xl sm:text-5xl text-[#363636] font-bold lg:tracking-[-0.1rem] lg:max-w-[70%]"
           >
             {title}
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 font-medium lg:tracking-[-0.02rem]"
+            className="sm:text-sm text-[16px] text-[#BBBBBB] -mt-5 sm:mt-0 lg:pr-10 font-medium lg:tracking-[-0.02rem] leading-5 lg:max-w-[70%]"
           >
             {description}
           </motion.div>

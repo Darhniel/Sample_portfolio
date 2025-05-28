@@ -9,25 +9,81 @@ const imageSlide = {
   transition: { delay: 0.2, duration: 0.8, ease: "easeInOut" },
 };
 
-export default function Carousel() {
-  const images = [
-    { src: "/voyasplash.png", alt: "Android Device Style" },
-    { src: "/leaplearners.png", alt: "Large Center Image" },
-    { src: "/orthorus.png", alt: "Cut Off Right Side" },
-    { src: "/reekaslider.png", alt: "Cut Off Right Side" },
-  ];
+const carouselImages = [
+  {
+    src: "/voyasplash.png",
+    alt: "Android Device Style",
+    width: 264.77,
+    height: 574,
+    className: "max-w-[125px] sm:max-w-[264.77px]",
+  },
+  {
+    src: "/orthorusslide.png",
+    alt: "Android Device Style",
+    width: 884,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[884px]",
+  },
+  {
+    src: "/vyntslide.png",
+    alt: "Large Center Image",
+    width: 264,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[264px]",
+  },
+  {
+    src: "/leaplearners.png",
+    alt: "Cut Off Right Side",
+    width: 884,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[884px]",
+  },
+  {
+    src: "/ajoinslide.png",
+    alt: "Cut Off Right Side",
+    width: 883.41,
+    height: 568,
+    className: "max-w-[400px] sm:max-w-[883px]",
+  },
+  {
+    src: "/orthorus.png",
+    alt: "Cut Off Right Side",
+    width: 883,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[883px]",
+  },
+  {
+    src: "/reekaslider.png",
+    alt: "Cut Off Right Side",
+    width: 883,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[883px]",
+  },
+  {
+    src: "/reekaslide.png",
+    alt: "Cut Off Right Side",
+    width: 860.41,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[600.41px]",
+  },
+];
 
+export default function Carousel() {
   const [translateX, setTranslateX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [dragOffset, setDragOffset] = useState(0);
+  const [currentX, setCurrentX] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Auto-scroll when not dragging
   useEffect(() => {
     if (!isDragging) {
       intervalRef.current = setInterval(() => {
-        setTranslateX(prev => prev - 1);
-      }, 16); // ~60fps for smooth animation
+        setTranslateX((prev) => prev - 1);
+      }, 16);
+    } else {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
     }
 
     return () => {
@@ -37,50 +93,51 @@ export default function Carousel() {
     };
   }, [isDragging]);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleStart = (clientX: number) => {
     setIsDragging(true);
-    setStartX(e.clientX);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    setCurrentX(clientX);
+  };
+  const handleMove = (clientX: number) => {
+    if (!isDragging) return;
+
+    const deltaX = clientX - currentX;
+    setTranslateX((prev) => prev + deltaX * 10); // 2x speed multiplier
+    setCurrentX(clientX);
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-    const currentX = e.clientX;
-    const diff = currentX - startX;
-    setDragOffset(diff);
+  const handleEnd = () => {
+    setIsDragging(false);
+    setCurrentX(0);
+  };
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleStart(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    handleMove(e.clientX);
   };
 
   const handleMouseUp = () => {
-    if (isDragging) {
-      setTranslateX(prev => prev + dragOffset);
-      setDragOffset(0);
-      setIsDragging(false);
-    }
+    handleEnd();
   };
 
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].clientX);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+  const handleMouseLeave = () => {
+    handleEnd();
   };
 
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-    const currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
-    setDragOffset(diff);
+  // Touch events
+  const handleTouchStart = (e: React.TouchEvent) => {
+    handleStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    e.preventDefault();
+    handleMove(e.touches[0].clientX);
   };
 
   const handleTouchEnd = () => {
-    if (isDragging) {
-      setTranslateX(prev => prev + dragOffset);
-      setDragOffset(0);
-      setIsDragging(false);
-    }
+    handleEnd();
   };
 
   return (
@@ -91,7 +148,7 @@ export default function Carousel() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -99,46 +156,25 @@ export default function Carousel() {
         <div
           className="flex flex-row"
           style={{
-            transform: `translateX(${translateX + dragOffset}px)`,
-            width: 'max-content',
-            transition: isDragging ? 'none' : 'transform 0.1s ease-out'
+            transform: `translateX(${translateX}px)`,
+            width: "max-content",
+            transition: isDragging ? "none" : "transform 0.1s ease-out",
           }}
         >
-          {/* Duplicate images multiple times for seamless loop */}
           {[...Array(10)].map((_, setIndex) => (
-            <div key={setIndex} className="flex flex-row">
-              <Image
-                src={images[0].src}
-                alt={images[0].alt}
-                width={264.77}
-                height={574}
-                style={{ objectFit: "inherit" }}
-                className="max-w-[125px] sm:max-w-[264.77px] flex-shrink-0"
-              />
-              <Image
-                src={images[1].src}
-                alt={images[1].alt}
-                width={884}
-                height={574}
-                style={{ objectFit: "inherit" }}
-                className="max-w-[400px] sm:max-w-[884px] flex-shrink-0"
-              />
-              <Image
-                src={images[2].src}
-                alt={images[2].alt}
-                width={883.8}
-                height={574}
-                style={{ objectFit: "inherit" }}
-                className="max-w-[400px] sm:max-w-[883.8px] flex-shrink-0"
-              />
-              <Image
-                src={images[3].src}
-                alt={images[3].alt}
-                width={600.41}
-                height={574}
-                style={{ objectFit: "inherit" }}
-                className="max-w-[400px] sm:max-w-[600.41px] flex-shrink-0"
-              />
+            <div key={setIndex} className="flex flex-row gap-4">
+              {carouselImages.map((img, i) => (
+                <Image
+                  key={`${setIndex}-${i}`}
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  style={{ objectFit: "inherit" }}
+                  className={`${img.className} flex-shrink-0`}
+                  draggable={false}
+                />
+              ))}
             </div>
           ))}
         </div>
