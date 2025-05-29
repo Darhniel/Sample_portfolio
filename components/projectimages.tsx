@@ -17,65 +17,65 @@ const Images: ProjectImagesProps[] = [
   {
     id: "voya",
     image: [
-      "/voya1.png",
-      "/voya2.png",
-      "/voya3.png",
-      "/voya4.png",
-      "/voya5.png",
+      "/voya1.jpg",
+      "/voya2.jpg",
+      "/voya3.jpg",
+      "/voya4.jpg",
+      "/voya5.jpg",
     ],
   },
   {
     id: "orthorus",
     image: [
-      "/orthorus1.png",
-      "/orthorus2.png",
-      "/orthorus3.png",
-      "/orthorus4.png",
-      "/orthorus5.png",
-      "/orthorus6.png",
-      "/orthorus7.png",
-      "/orthorus8.png",
+      "/orthorus1.jpg",
+      "/orthorus2.jpg",
+      "/orthorus3.jpg",
+      "/orthorus4.jpg",
+      "/orthorus5.jpg",
+      "/orthorus6.jpg",
+      "/orthorus7.jpg",
+      "/orthorus8.jpg",
     ],
   },
   {
     id: "vynt",
-    image: ["/vynt1.png", "/vynt2.png", "/vynt3.png", "/vynt4.png"],
+    image: ["/vynt1.jpg", "/vynt2.jpg", "/vynt3.jpg", "/vynt4.jpg"],
   },
   {
     id: "creatorwire",
-    image: ["/creatorwire1.png"],
+    image: ["/creatorwire1.jpg"],
   },
   {
     id: "reeka",
     image: [
-      "/reeka1.png",
-      "/reeka2.png",
-      "/reeka3.png",
-      "/reeka4.png",
-      "/reeka5.png",
-      "/reeka6.png",
-      "/reeka7.png",
-      "/reeka7.png",
+      "/reeka1.jpg",
+      "/reeka2.jpg",
+      "/reeka3.jpg",
+      "/reeka4.jpg",
+      "/reeka5.jpg",
+      "/reeka6.jpg",
+      "/reeka7.jpg",
+      "/reeka7.jpg",
     ],
   },
   {
     id: "reekadeck",
     image: [
-      "/reekadeck1.png",
-      "/reekadeck2.png",
-      "/reekadeck3.png",
-      "/reekadeck4.png",
-      "/reekadeck5.png",
+      "/reekadeck1.jpg",
+      "/reekadeck2.jpg",
+      "/reekadeck3.jpg",
+      "/reekadeck4.jpg",
+      "/reekadeck5.jpg",
     ],
   },
   {
     id: "ajoin",
     image: [
-      "/ajoin1.png",
-      "/ajoin2.png",
-      "/ajoin3.png",
-      "/ajoin4.png",
-      "/ajoin5.png",
+      "/ajoin1.jpg",
+      "/ajoin2.jpg",
+      "/ajoin3.jpg",
+      "/ajoin4.jpg",
+      "/ajoin5.jpg",
     ],
   },
 ];
@@ -118,7 +118,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                 objectFit: "inherit",
                 
               }}
-            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"}`}
+            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"} ${ img === "/voya5.jpg" && "w-[796px]"}`}
             />
           </motion.div>
         ))}

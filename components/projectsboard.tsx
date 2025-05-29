@@ -116,7 +116,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           >
             {description}
           </motion.div>
-          {id === "creatorwire" && (
+          {(id === "creatorwire" || id === "vynt") && (
             <button className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]">
               <p>Visit Website</p>
               <NorthEastIcon style={{ fontSize: 16 }} />
