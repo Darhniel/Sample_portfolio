@@ -47,7 +47,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
   {
     id: "creatorwire",
     button: ["Product Design"],
-    title: "CREATORWIRE — The app that solves all your mobility issues within",
+    title: "CREATORWIRE — A Payment Solution that Helps Creators, Brands and Agency",
     description:
       "This is a website that showacses the solutions provided to the payment issues that arises btween Agencies, Brands and Creators",
   },
@@ -91,9 +91,9 @@ const ProjectBoard = () => {
 const Projectsboard: FC<ProjectsboardProps> = (props) => {
   const { button, title, description, id } = props;
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="flex flex-col mt-10">
       <div className="flex max-w-screen items-start">
-        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[42] gap-6 mx-5 sm:mx-0">
+        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[52] gap-6 mx-5 sm:mx-0">
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
             {button.map((item, index) => (
               <button
@@ -106,13 +106,13 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="text-2xl sm:text-5xl text-[#363636] font-bold lg:tracking-[-0.1rem] lg:max-w-[70%]"
+            className="text-2xl sm:text-6xl text-[#363636] font-bold lg:tracking-[-0.1rem] lg:w-[75%]"
           >
             {title}
           </motion.div>
           <motion.div
             {...TitleLeft}
-            className="sm:text-sm text-[16px] text-[#BBBBBB] -mt-5 sm:mt-0 lg:pr-10 font-medium lg:tracking-[-0.02rem] leading-5 lg:max-w-[70%]"
+            className="sm:text-sm text-xs text-[#BBBBBB] -mt-5 sm:mt-0 lg:w-[70%] font-medium lg:tracking-[-0.02rem]"
           >
             {description}
           </motion.div>

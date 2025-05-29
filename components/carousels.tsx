@@ -42,7 +42,7 @@ const carouselImages = [
     src: "/ajoinslide.png",
     alt: "Cut Off Right Side",
     width: 883.41,
-    height: 568,
+    height: 574,
     className: "max-w-[400px] sm:max-w-[883px]",
   },
   {
@@ -70,95 +70,34 @@ const carouselImages = [
 
 export default function Carousel() {
   const [translateX, setTranslateX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [currentX, setCurrentX] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-scroll when not dragging
+  // Auto-scroll continuously
   useEffect(() => {
-    if (!isDragging) {
-      intervalRef.current = setInterval(() => {
-        setTranslateX((prev) => prev - 1);
-      }, 16);
-    } else {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    }
+    intervalRef.current = setInterval(() => {
+      setTranslateX((prev) => prev - 1);
+    }, 16);
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
     };
-  }, [isDragging]);
+  }, []);
 
-  const handleStart = (clientX: number) => {
-    setIsDragging(true);
-    setCurrentX(clientX);
-  };
-  const handleMove = (clientX: number) => {
-    if (!isDragging) return;
 
-    const deltaX = clientX - currentX;
-    setTranslateX((prev) => prev + deltaX * 10); // 2x speed multiplier
-    setCurrentX(clientX);
-  };
-
-  const handleEnd = () => {
-    setIsDragging(false);
-    setCurrentX(0);
-  };
-  const handleMouseDown = (e: React.MouseEvent) => {
-    e.preventDefault();
-    handleStart(e.clientX);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    handleMove(e.clientX);
-  };
-
-  const handleMouseUp = () => {
-    handleEnd();
-  };
-
-  const handleMouseLeave = () => {
-    handleEnd();
-  };
-
-  // Touch events
-  const handleTouchStart = (e: React.TouchEvent) => {
-    handleStart(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    e.preventDefault();
-    handleMove(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    handleEnd();
-  };
 
   return (
-    <div className="mt-10 mb-8 flex flex-row justify-center items-center">
+    <div className="mt-10 mb-8 flex flex-row justify-center items-center -z-40">
       <motion.div
         {...imageSlide}
-        className="flex flex-row ml-5 sm:ml-20 max-h-[400px] sm:max-h-[574px] overflow-hidden relative cursor-grab active:cursor-grabbing select-none"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        className="flex flex-row ml-5 sm:ml-0 max-h-[400px] sm:max-h-[574px] overflow-hidden relative select-none"
       >
         <div
           className="flex flex-row"
           style={{
             transform: `translateX(${translateX}px)`,
             width: "max-content",
-            transition: isDragging ? "none" : "transform 0.1s ease-out",
           }}
         >
           {[...Array(10)].map((_, setIndex) => (

@@ -99,15 +99,15 @@ const Projectimages = () => {
 const Projectpic = (props: ProjectImagesProps) => {
   const { image, id } = props;
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col gap-5 md:gap-8 px-5 sm:px-10 m-auto mt-12 mb-10 sm:mb-20">
+    <div className="flex flex-col justify-center items-center w-full">
+      <div className="flex flex-col gap-5 md:gap-8 px-5 sm:px-10 m-auto mt-12 mb-10 sm:mb-20 w-full">
         {image.map((img, index) => (
           <motion.div
             {...imageUp}
             key={index}
             className={`${id === "vynt" && "bg-[#BDBDBD]"} ${
-              id === "creatorwire" && "min-h-[2647px]"
-            } flex justify-center max-h-[843px] p-4 sm:p-8 md:max-w-[1352px] border border-[#00000033] rounded-xl`}
+              id === "creatorwire" && "max-h-[2647px]"
+            } flex justify-center max-h-[843px] p-4 sm:p-8 md:min-w-[90%] border border-[#00000033] rounded-xl`}
           >
             <Image
               width={1261.48}
@@ -116,32 +116,9 @@ const Projectpic = (props: ProjectImagesProps) => {
               alt={`${id} Project Image`}
               style={{
                 objectFit: "inherit",
-                maxWidth:
-                  img === "/voya5.png"
-                    ? "796px"
-                    : id === "orthorus"
-                    ? "1057px"
-                    : id === "creatorwire"
-                    ? "732px"
-                    : id === "reeka"
-                    ? "1057px"
-                    : id === "ajoin"
-                    ? "1261px"
-                    : id === "reekadeck"
-                    ? "1137px"
-                    : "1261.48px",
-                maxHeight:
-                  id === "orthorus"
-                    ? "686px"
-                    : id === "creatorwire"
-                    ? "2507px"
-                    : id === "reeka"
-                    ? "683px"
-                    : id === "reekadeck"
-                    ? "640px"
-                    : "717px",
+                
               }}
-              className="rounded-lg shadow-lg w-full"
+            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"}`}
             />
           </motion.div>
         ))}

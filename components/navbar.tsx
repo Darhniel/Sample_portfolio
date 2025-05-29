@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-medium w-11/12 text-sm sm:w-[488px] flex flex-row justify-between items-center text-[#000000] px-2 h-10 sm:h-12 bg-white rounded-4xl m-auto border border-[#00000033] pl-4">
+    <div className="fixed right-0 left-0 z-50 font-medium w-11/12 text-sm sm:w-[488px] flex flex-row justify-between items-center text-[#000000] px-2 h-10 sm:h-12 bg-white rounded-4xl m-auto border border-[#00000033] pl-4">
       <Link href={"/"} className="">
         OD
       </Link>

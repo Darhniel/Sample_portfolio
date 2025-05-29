@@ -27,7 +27,7 @@ const Workpage = () => {
   }, []);
 
   return (
-    <div id="work" className="bg-white h-auto pt-5 font-medium font-inter">
+    <div id="work" className="bg-white my-10 h-auto pt-5 font-medium font-inter">
       <motion.div
         {...moveLeft}
         className="flex flex-col justify-center items-center gap-3"
@@ -37,7 +37,7 @@ const Workpage = () => {
           MY WORK
         </div>
       </motion.div>
-      <div className="">
+      <div className="mt-10">
         <MyWorks />
         <Contact />
       </div>

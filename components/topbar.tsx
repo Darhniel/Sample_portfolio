@@ -47,7 +47,7 @@ const Topbar = () => {
             opacity: 0.8,
           }}
           href="mailto:Olojodaniel99@gmail.com"
-          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:py-3 px-6 py-2 rounded-4xl text-sm"
+          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-5 sm:py-3 px-6 py-2 rounded-4xl text-sm"
         >
           Work with me
         </motion.a>
