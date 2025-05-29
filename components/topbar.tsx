@@ -15,7 +15,7 @@ const fadeInUp = {
 
 const Topbar = () => {
   return (
-    <div className="">
+    <div className="mt-10">
       <div className="flex flex-col justify-center items-center text-center gap-4 w-11/12 sm:w-[90%] md:w-[80%] lg:w-[50%] m-auto mt-5">
         <motion.p
           {...namefadeInUp}
