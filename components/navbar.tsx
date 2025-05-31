@@ -24,7 +24,7 @@ const Navbar = () => {
           My Work
         </div>
         <div className="h-full w-36 rounded-4xl bg-[#363636] text-[#FAFAFA] border border-[#000000] text-center flex justify-center items-center">
-          <a href="mailto:olojodaniel99@gmail.com"> Work with me</a>
+          <a href="https://calendly.com/olojodaniel99/30min" target="_blank"> Let&apos;s talk Design</a>
         </div>
       </div>
     </div>

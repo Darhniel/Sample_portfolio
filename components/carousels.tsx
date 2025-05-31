@@ -38,29 +38,29 @@ const carouselImages = [
     height: 574,
     className: "max-w-[400px] sm:max-w-[884px]",
   },
-  // {
-  //   src: "/ajoinslide.png",
-  //   alt: "Cut Off Right Side",
-  //   width: 883.41,
-  //   height: 574,
-  //   className: "max-w-[400px] sm:max-w-[883px]",
-  // },
   {
-    src: "/orthorus1.jpg",
+    src: "/ajoinslide.jpg",
+    alt: "Cut Off Right Side",
+    width: 264.77,
+    height: 574,
+    className: "max-w-[400px] sm:max-w-[264.77px]",
+  },
+  {
+    src: "/orthorus.jpg",
     alt: "Cut Off Right Side",
     width: 883,
     height: 574,
     className: "max-w-[400px] sm:max-w-[883px]",
   },
   {
-    src: "/reekaslider.png",
+    src: "/reekaslide.jpg",
     alt: "Cut Off Right Side",
-    width: 883,
+    width: 600,
     height: 574,
-    className: "max-w-[400px] sm:max-w-[883px]",
+    className: "max-w-[400px] sm:max-w-[600px]",
   },
   {
-    src: "/creatorwireslide.png",
+    src: "/creatorwire.jpg",
     alt: "Cut Off Right Side",
     width: 860.41,
     height: 574,
@@ -88,7 +88,7 @@ export default function Carousel() {
 
 
   return (
-    <div className="mt-10 flex flex-row justify-center items-center -z-40">
+    <div className="mt-32 flex flex-row justify-center items-center -z-40">
       <motion.div
         {...imageSlide}
         className="flex flex-row ml-5 sm:ml-0 max-h-[400px] sm:max-h-[574px] overflow-hidden relative select-none"

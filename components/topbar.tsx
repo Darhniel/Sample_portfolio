@@ -38,19 +38,19 @@ const Topbar = () => {
           I partner with startup founders to bring their vision to life through
           design that captivates users and attracts investors
         </motion.p>
-
-        <motion.a
+        <motion.div
           {...fadeInUp}
           whileHover={{
             scale: 1.1,
-            transition: { duration: 0.5 },
+            transition: { duration: 0.3 },
             opacity: 0.8,
           }}
-          href="mailto:Olojodaniel99@gmail.com"
           className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-5 sm:py-3 px-6 py-2 rounded-4xl text-sm"
         >
-          Work with me
-        </motion.a>
+          <a href="https://calendly.com/olojodaniel99/30min" target="_blank">
+            Let&apos;s talk Design
+          </a>
+        </motion.div>
       </div>
 
       {/* Carousel Section */}
