@@ -16,7 +16,7 @@ const fadeInUp = {
 const Topbar = () => {
   return (
     <div className="mt-24">
-      <div className="flex flex-col justify-center items-center text-center gap-4 w-11/12 sm:w-[90%] md:w-[80%] lg:w-[50%] m-auto mt-5">
+      <div className="flex flex-col justify-center items-center text-center w-11/12 sm:w-[90%] md:w-[80%] lg:w-[50%] m-auto mt-5">
         <motion.p
           {...namefadeInUp}
           className="text-3xl sm:text-5xl text-[#363636] font-semibold mt-12 tracking-[-0.03rem] sm:tracking-[-0.2rem]"
@@ -26,14 +26,14 @@ const Topbar = () => {
 
         <motion.p
           {...fadeInUp}
-          className="text-[#CFCFCF] text-2xl sm:text-6xl font-semibold tracking-[-0.03rem] sm:tracking-[-0.3rem] leading-6 sm:leading-16"
+          className="my-4 text-[#CFCFCF] text-2xl sm:text-6xl font-semibold tracking-[-0.03rem] sm:tracking-[-0.3rem] leading-6 sm:leading-16"
         >
           PRODUCT DESIGNER & PITCH DECK DESIGNER
         </motion.p>
 
         <motion.p
           {...fadeInUp}
-          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] sm:mt-5"
+          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] sm:mt-5 mb-4"
         >
           I partner with startup founders to bring their vision to life through
           design that captivates users and attracts investors
