@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <div
       className={`${
-        id === "reeka" ? "bg-[#F0F0F0]" : "bg-white"
+        id === "reeka" ? "bg-[#F0F0F0]" : "bg-[#FAFAFA]"
       } min-h-screen pb-1 pt-5 font-inter`}
     >
       <Navbar />

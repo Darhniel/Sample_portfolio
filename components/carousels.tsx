@@ -18,14 +18,14 @@ const carouselImages = [
     className: "max-w-[125px] sm:max-w-[264.77px]",
   },
   {
-    src: "/orthorusslide.png",
+    src: "/orthorusslide.jpg",
     alt: "Android Device Style",
     width: 884,
     height: 574,
     className: "max-w-[400px] sm:max-w-[884px]",
   },
   {
-    src: "/vyntslide.png",
+    src: "/vyntslide.jpg",
     alt: "Large Center Image",
     width: 264,
     height: 574,
@@ -38,15 +38,15 @@ const carouselImages = [
     height: 574,
     className: "max-w-[400px] sm:max-w-[884px]",
   },
+  // {
+  //   src: "/ajoinslide.png",
+  //   alt: "Cut Off Right Side",
+  //   width: 883.41,
+  //   height: 574,
+  //   className: "max-w-[400px] sm:max-w-[883px]",
+  // },
   {
-    src: "/ajoinslide.png",
-    alt: "Cut Off Right Side",
-    width: 883.41,
-    height: 574,
-    className: "max-w-[400px] sm:max-w-[883px]",
-  },
-  {
-    src: "/orthorus.png",
+    src: "/orthorus1.jpg",
     alt: "Cut Off Right Side",
     width: 883,
     height: 574,
@@ -60,11 +60,11 @@ const carouselImages = [
     className: "max-w-[400px] sm:max-w-[883px]",
   },
   {
-    src: "/reekaslide.png",
+    src: "/creatorwireslide.png",
     alt: "Cut Off Right Side",
     width: 860.41,
     height: 574,
-    className: "max-w-[400px] sm:max-w-[600.41px]",
+    className: "max-w-[400px] sm:max-w-[860.41px]",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Carousel() {
 
 
   return (
-    <div className="mt-10 mb-8 flex flex-row justify-center items-center -z-40">
+    <div className="mt-10 flex flex-row justify-center items-center -z-40">
       <motion.div
         {...imageSlide}
         className="flex flex-row ml-5 sm:ml-0 max-h-[400px] sm:max-h-[574px] overflow-hidden relative select-none"
@@ -101,7 +101,7 @@ export default function Carousel() {
           }}
         >
           {[...Array(10)].map((_, setIndex) => (
-            <div key={setIndex} className="flex flex-row gap-4">
+            <div key={setIndex}  className="flex flex-row gap-4 mr-5">
               {carouselImages.map((img, i) => (
                 <Image
                   key={`${setIndex}-${i}`}

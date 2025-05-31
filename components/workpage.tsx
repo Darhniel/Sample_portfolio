@@ -27,7 +27,7 @@ const Workpage = () => {
   }, []);
 
   return (
-    <div id="work" className="bg-white my-10 h-auto pt-5 font-medium font-inter">
+    <div id="work" className="bg-white mt-20 mb-10 h-auto pt-20 font-medium font-inter">
       <motion.div
         {...moveLeft}
         className="flex flex-col justify-center items-center gap-3"

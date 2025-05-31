@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed right-0 left-0 z-50 font-medium w-11/12 text-sm sm:w-[488px] flex flex-row justify-between items-center text-[#000000] px-2 h-10 sm:h-12 bg-white rounded-4xl m-auto border border-[#00000033] pl-4">
+    <div className="fixed right-0 left-0 z-50 font-medium w-11/12 text-sm sm:w-[488px] flex flex-row justify-between items-center text-[#000000] px-1 h-10 sm:h-12 bg-white rounded-4xl m-auto border border-[#00000033] pl-5">
       <Link href={"/"} className="">
         OD
       </Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
         >
           My Work
         </div>
-        <div className="h-full w-36 rounded-4xl border border-[#000000] text-center flex justify-center items-center">
+        <div className="h-full w-36 rounded-4xl bg-[#363636] text-[#FAFAFA] border border-[#000000] text-center flex justify-center items-center">
           <a href="mailto:olojodaniel99@gmail.com"> Work with me</a>
         </div>
       </div>
