@@ -33,7 +33,7 @@ const Topbar = () => {
 
         <motion.p
           {...fadeInUp}
-          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] sm:mt-5 mb-4"
+          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] sm:mt-5 mb-5"
         >
           I partner with startup founders to bring their vision to life through
           design that captivates users and attracts investors
