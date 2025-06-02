@@ -17,11 +17,11 @@ const Images: ProjectImagesProps[] = [
   {
     id: "voya",
     image: [
-      "/voya1.jpg",
-      "/voya2.jpg",
-      "/voya3.jpg",
-      "/voya4.jpg",
-      "/voya5.jpg",
+      "/voya1.png",
+      "/voya2.png",
+      "/voya3.png",
+      "/voya4.png",
+      "/voya5.png",
     ],
   },
   {
@@ -39,7 +39,7 @@ const Images: ProjectImagesProps[] = [
   },
   {
     id: "vynt",
-    image: ["/vynt1.jpg", "/vynt2.jpg", "/vynt3.jpg", "/vynt4.jpg"],
+    image: ["/vynt1.png", "/vynt2.png", "/vynt3.png", "/vynt4.png"],
   },
   {
     id: "creatorwire",
@@ -71,11 +71,11 @@ const Images: ProjectImagesProps[] = [
   {
     id: "ajoin",
     image: [
-      "/ajoin1.jpg",
-      "/ajoin2.jpg",
-      "/ajoin3.jpg",
-      "/ajoin4.jpg",
-      "/ajoin5.jpg",
+      "/ajoin1.png",
+      "/ajoin2.png",
+      "/ajoin3.png",
+      "/ajoin4.png",
+      "/ajoin5.png",
     ],
   },
 ];
@@ -116,9 +116,10 @@ const Projectpic = (props: ProjectImagesProps) => {
               alt={`${id} Project Image`}
               style={{
                 objectFit: "inherit",
-                
               }}
-            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"} ${ id === "orthorus" && "w-[1057px]"} ${ img === "/voya5.jpg" && "w-[796px]"}`}
+              className={`rounded-lg  ${id === "creatorwire" && "w-[732px]"} ${
+                id === "orthorus" && "w-[1057px]"
+              } ${img === "/voya5.png" && "w-[796px]"}`}
             />
           </motion.div>
         ))}
