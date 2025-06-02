@@ -6,9 +6,9 @@ const Contact = () => {
           CONTACT
         </p>
       </div>
-      <div className=" flex flex-col gap-2 font-semibold text-[20px] mt-4 uppercase text-[#F9FFFC] tracking-tight">
+      <div className=" flex flex-col gap-2 font-semibold text-[20px] mt-4 pb-2 uppercase text-[#F9FFFC] tracking-tight">
         <a href="mailto:olojodaniel99@gmail.com">Olojodaniel99@gmail.com</a>
-        <p>linkedin</p>
+        {/* <p>linkedin</p> */}
       </div>
     </div>
   );

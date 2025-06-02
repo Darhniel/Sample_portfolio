@@ -118,7 +118,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                 objectFit: "inherit",
                 
               }}
-            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"} ${ img === "/voya5.jpg" && "w-[796px]"}`}
+            className={`rounded-lg  ${ id === "creatorwire" && "w-[732px]"} ${ id === "orthorus" && "w-[1057px]"} ${ img === "/voya5.jpg" && "w-[796px]"}`}
             />
           </motion.div>
         ))}

@@ -4,11 +4,13 @@ import { FC } from "react";
 import { useParams } from "next/navigation";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { motion } from "motion/react";
+import Link from "next/link";
 interface ProjectsboardProps {
   button: string[];
   title: string;
   description: string;
   id?: string;
+  websitelink?: string;
 }
 
 const buttonScale = {
@@ -29,6 +31,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     title: "VOYA — The app that solves all your mobility issues within Africa",
     description:
       "This all-in-one mobility and lifestyle app helps users navigate visa applications, book private daily rides, access personalized client services, and enjoy luxury boat cruises, delivering seamless convenience for business and leisure needs",
+    websitelink: "https://www.voyaapp.co",
   },
   {
     id: "orthorus",
@@ -43,13 +46,16 @@ const Projectsboardlist: ProjectsboardProps[] = [
     title: "VNYT — A Thrift Fashion Marketplace",
     description:
       "An intuitive app designed for fashion enthusiasts to discover, buy, and sell pre-loved clothing and accessories, promoting sustainable style through the art of thrifting.",
+    websitelink: "https://www.vyntapp.com",
   },
   {
     id: "creatorwire",
     button: ["Product Design"],
-    title: "CREATORWIRE — A Payment Solution that Helps Creators, Brands and Agency",
+    title:
+      "CREATORWIRE — A Payment Solution that Helps Creators, Brands and Agency",
     description:
       "This is a website that showacses the solutions provided to the payment issues that arises btween Agencies, Brands and Creators",
+    websitelink: "http://CreatorWire.com",
   },
   {
     id: "reeka",
@@ -61,7 +67,8 @@ const Projectsboardlist: ProjectsboardProps[] = [
   {
     id: "ajoin",
     button: ["Product Design", "Design System"],
-    title: "AJOIN — A Sporting Community that brings together People, Places and Equipment",
+    title:
+      "AJOIN — A Sporting Community that brings together People, Places and Equipment",
     description:
       "A user-friendly app designed to help sports enthusiasts easily discover nearby sporting equipment rentals and book local arenas, making it simple to gear up and get active wherever they are.",
   },
@@ -89,7 +96,7 @@ const ProjectBoard = () => {
 };
 
 const Projectsboard: FC<ProjectsboardProps> = (props) => {
-  const { button, title, description, id } = props;
+  const { button, title, description, id, websitelink } = props;
   return (
     <div className="flex flex-col mt-32 sm:mt-40">
       <div className="flex max-w-screen items-start">
@@ -116,12 +123,16 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           >
             {description}
           </motion.div>
-          {(id === "creatorwire" || id === "vynt") && (
-            <button className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]">
-              <p>Visit Website</p>
-              <NorthEastIcon style={{ fontSize: 16 }} />
-            </button>
-          )}
+          {(id === "creatorwire" || id === "vynt" || id === "voya") &&
+            websitelink && (
+              <Link
+                href={websitelink}
+                className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]"
+              >
+                <p>Visit Website</p>
+                <NorthEastIcon style={{ fontSize: 16 }} />
+              </Link>
+            )}
         </div>
       </div>
     </div>

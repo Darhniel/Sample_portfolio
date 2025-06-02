@@ -38,7 +38,7 @@ const Workslist: MyWorksProps[] = [
   },
   {
     id: "vynt",
-    image: "/vynt.jpg",
+    image: "/vyntwork.jpg",
     description: "Mobile App Design",
     name: "VYNT",
     width: 484.68,
