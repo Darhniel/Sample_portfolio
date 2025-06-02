@@ -11,7 +11,7 @@ const imageSlide = {
 
 const carouselImages = [
   {
-    src: "/voyasplash.png",
+    src: "/voyasplash.jpg",
     alt: "voyasplash",
     width: 264.77,
     height: 574,
