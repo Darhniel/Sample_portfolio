@@ -30,7 +30,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System"],
     title: "VOYA — The app that solves all your mobility issues within Africa",
     description:
-      "This all-in-one mobility and lifestyle app helps users navigate visa applications, book private daily rides, access personalized client services, and enjoy luxury boat cruises, delivering seamless convenience for business and leisure needs",
+      "This all-in-one mobility and lifestyle app helps users navigate visa applications, book private daily rides, access personalized client services, and enjoy luxury boat cruises, delivering seamless convenience for business and leisure needs.",
     websitelink: "https://www.voyaapp.co",
   },
   {
@@ -45,7 +45,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System"],
     title: "VNYT — A Thrift Fashion Marketplace",
     description:
-      "An intuitive app designed for fashion enthusiasts to discover, buy, and sell pre-loved clothing and accessories, promoting sustainable style through the art of thrifting.",
+      "An intuitive app designed for fashion enthusiasts to discover, buy, and sell pre-loved clothing and accessories, promoting sustainable style through the art of thrifting",
     websitelink: "https://www.vyntapp.com",
   },
   {
@@ -54,7 +54,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     title:
       "CREATORWIRE — A Payment Solution that Helps Creators, Brands and Agency",
     description:
-      "This is a website that showacses the solutions provided to the payment issues that arises btween Agencies, Brands and Creators",
+      "Website that showcases the solutions provided to the payment issues that arises between Agencies, Brands and Creators.",
     websitelink: "http://CreatorWire.com",
   },
   {
@@ -77,7 +77,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Deck Design", "Design System"],
     title: "REEKA PITCH DECK",
     description:
-      "A pitch deck outlining the challenges faced by the real estate industry, presenting Reeka’s solution to streamline property management and enhance tenant experience, and detailing Reeka’s step-by-step implementation plan for these solutions.",
+      "Outlining the challenges faced by the real estate industry, presenting Reeka's solution to streamline property management and enhance tenant experience, and detailing Reeka's step-by-step implementation plan for these solutions.",
   },
 ];
 const ProjectBoard = () => {
