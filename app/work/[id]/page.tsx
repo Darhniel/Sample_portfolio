@@ -8,15 +8,19 @@ const Page = () => {
   const params = useParams();
   const id = params?.id as string | undefined;
   return (
-    <div
-      className={`${
-        id === "reeka" ? "bg-[#F0F0F0]" : "bg-[#FAFAFA]"
-      } min-h-screen pb-1 pt-5 font-inter`}
-    >
-      <Navbar />
-      <ProjectBoard />
-      <Projectimages />
+    <div className="bg-white w-full min-h-screen">
+      <div className="max-w-[1600px] mx-auto">
+        <div
+          className={`${id === "reeka" ? "bg-[#F0F0F0]" : "bg-[#FAFAFA]"
+            } min-h-screen pb-1 pt-5 font-inter`}
+        >
+          <Navbar />
+          <ProjectBoard />
+          <Projectimages />
+        </div>
+      </div>
     </div>
+
   );
 };
 export default Page;
