@@ -289,7 +289,9 @@ const Projectpic = (props: ProjectImagesProps) => {
               sectionContent.extra.some((e) => e.indexAfter === index) && (
                 <motion.div
                   {...imageUp}
-                  className="mt-[120px] mb-[100px] mx-auto max-w-3xl flex flex-col justify-center items-center gap-[64px]"
+                  className={`mt-[120px] mb-[100px] flex flex-col justify-center items-center gap-[64px] ${
+                    id === "voya" && index === 3 ? "ml-5 max-w-2xl" : "max-w-3xl mx-auto"
+                  }`}
                 >
                   {/* Special handling for VYNT project */}
                   {id === "vynt" && index === 1 && (
@@ -428,7 +430,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                       .map((extraSection, i) => (
                         <div key={`extra-${i}`} className="flex flex-col gap-[24px] items-center">
                           {extraSection.title && (
-                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] ">
+                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
                               {extraSection.title}
                             </h2>
                           )}
@@ -436,7 +438,12 @@ const Projectpic = (props: ProjectImagesProps) => {
                             typeof block === "string" ? (
                               <p
                                 key={j}
-                                className="text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em]"
+                                className={`text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] ${
+                                  id === "voya" && extraSection.title === "" && typeof block === "string" && 
+                                  (block.includes("Gamification") || block.includes("My Tasks"))
+                                    ? "text-center"
+                                    : "text-center"
+                                }`}
                               >
                                 {block}
                               </p>
