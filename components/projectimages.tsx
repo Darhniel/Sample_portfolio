@@ -302,7 +302,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                         return (
                           <div className="flex flex-col gap-[24px] items-center">
                             {firstExtra?.title && (
-                              <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
+                              <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
                                 {firstExtra?.title}
                               </h2>
                             )}
@@ -341,7 +341,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                           return (
                             <div className="flex flex-col gap-[24px] items-center">
                               {firstItem.title && (
-                                <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
+                                <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
                                   {firstItem.title}
                                 </h2>
                               )}
@@ -349,7 +349,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                                 typeof block === "string" ? (
                                   <p
                                     key={j}
-                                    className="text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] text-center"
+                                    className="text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em]"
                                   >
                                     {block}
                                   </p>
@@ -430,7 +430,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                       .map((extraSection, i) => (
                         <div key={`extra-${i}`} className="flex flex-col gap-[24px] items-center">
                           {extraSection.title && (
-                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
+                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
                               {extraSection.title}
                             </h2>
                           )}
@@ -441,8 +441,8 @@ const Projectpic = (props: ProjectImagesProps) => {
                                 className={`text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] ${
                                   id === "voya" && extraSection.title === "" && typeof block === "string" && 
                                   (block.includes("Gamification") || block.includes("My Tasks"))
-                                    ? "text-center"
-                                    : "text-center"
+                                    ? ""
+                                    : ""
                                 }`}
                               >
                                 {block}
