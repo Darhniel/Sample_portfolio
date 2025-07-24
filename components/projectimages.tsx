@@ -289,7 +289,7 @@ const Projectpic = (props: ProjectImagesProps) => {
               sectionContent.extra.some((e) => e.indexAfter === index) && (
                 <motion.div
                   {...imageUp}
-                  className="mt-[120px] mb-[100px] mx-auto max-w-6xl flex flex-col justify-center items-center gap-[64px]"
+                  className="mt-[120px] mb-[100px] mx-auto max-w-3xl flex flex-col justify-center items-center gap-[64px]"
                 >
                   {/* Special handling for VYNT project */}
                   {id === "vynt" && index === 1 && (
@@ -300,7 +300,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                         return (
                           <div className="flex flex-col gap-[24px] items-center">
                             {firstExtra?.title && (
-                              <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
+                              <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
                                 {firstExtra?.title}
                               </h2>
                             )}
@@ -308,7 +308,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                               typeof block === "string" ? (
                                 <p
                                   key={j}
-                                  className="text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] text-center"
+                                  className="text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] max-w-3xl"
                                 >
                                   {block}
                                 </p>
@@ -339,7 +339,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                           return (
                             <div className="flex flex-col gap-[24px] items-center">
                               {firstItem.title && (
-                                <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
+                                <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] text-center">
                                   {firstItem.title}
                                 </h2>
                               )}
@@ -367,8 +367,8 @@ const Projectpic = (props: ProjectImagesProps) => {
                         })()}
                       </div>
 
-                      {/* Stats items in a grid row */}
-                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[40px] w-full justify-center">
+                      {/* Stats items in a grid row - keeping max-w-6xl and original styling */}
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[40px] w-full justify-center max-w-6xl">
                         {sectionContent.extra
                           .filter((e) => e.indexAfter === index)
                           .slice(1) // Skip the first item (results text)
@@ -426,9 +426,9 @@ const Projectpic = (props: ProjectImagesProps) => {
                     sectionContent.extra
                       .filter((e) => e.indexAfter === index)
                       .map((extraSection, i) => (
-                        <div key={`extra-${i}`} className="flex flex-col gap-[24px]">
+                        <div key={`extra-${i}`} className="flex flex-col gap-[24px] items-center">
                           {extraSection.title && (
-                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em]">
+                            <h2 className="text-[36px] font-medium text-[#363636] tracking-[-0.04em] ">
                               {extraSection.title}
                             </h2>
                           )}
@@ -443,7 +443,7 @@ const Projectpic = (props: ProjectImagesProps) => {
                             ) : (
                               <ul
                                 key={j}
-                                className="list-disc text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] ml-5 space-y-2"
+                                className="list-disc text-[#BBBBBB] font-medium text-[20px] tracking-[-0.0024em] ml-5 space-y-2 text-left"
                               >
                                 {block.map((item, k) => (
                                   <li key={k}>{item}</li>
