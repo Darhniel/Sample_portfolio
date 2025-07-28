@@ -30,7 +30,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System"],
     title: "VOYA — The app that solves all your mobility issues within Africa",
     description:
-      "This all-in-one mobility and lifestyle app helps users navigate visa applications, book private daily rides, access personalized client services, and enjoy luxury boat cruises, delivering seamless convenience for business and leisure needs.",
+      "",
     websitelink: "https://www.voyaapp.co",
   },
   {
@@ -38,14 +38,14 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System", "Dashboard"],
     title: "ORTHORUS — Raise Capital & Run Investor Ops in One Platform",
     description:
-      "A streamlined web platform for startups and investment managers to efficiently raise capital and manage investor operations, from fundraising campaigns to reporting and compliance.",
+      "",
   },
   {
     id: "vynt",
     button: ["Product Design", "Design System"],
     title: "VNYT — A Thrift Fashion Marketplace",
     description:
-      "An intuitive app designed for fashion enthusiasts to discover, buy, and sell pre-loved clothing and accessories, promoting sustainable style through the art of thrifting",
+      "",
     websitelink: "https://www.vyntapp.com",
   },
   {
@@ -62,7 +62,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     button: ["Product Design", "Design System"],
     title: "REEKA — A Web Based Application that Manages Housing and Tenancy",
     description:
-      "A comprehensive web-based platform that simplifies property management, helping landlords and housing providers track tenants, manage leases, handle payments, and streamline communication, all in one place.",
+      "",
   },
   {
     id: "ajoin",
@@ -70,7 +70,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     title:
       "AJOIN — A Sporting Community that brings together People, Places and Equipment",
     description:
-      "A user-friendly app designed to help sports enthusiasts easily discover nearby sporting equipment rentals and book local arenas, making it simple to gear up and get active wherever they are.",
+      "",
   },
   {
     id: "reekadeck",

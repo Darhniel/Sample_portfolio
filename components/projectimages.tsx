@@ -251,7 +251,7 @@ const Projectpic = (props: ProjectImagesProps) => {
               {...imageUp}
               className={`${id === "vynt" && "bg-[#BDBDBD]"} ${
                 id === "creatorwire" && "max-h-[2647px]"
-              } flex justify-center max-h-[843px] p-4 sm:p-8 md:min-w-[90%] border border-[#00000033] rounded-xl`}
+              } flex justify-center max-h-[843px] p-4 sm:p-8 md:min-w-[90%] rounded-xl bg-[#F5F5F580]`}
             >
               <Image
                 width={1261.48}
