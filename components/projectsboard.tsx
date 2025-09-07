@@ -11,6 +11,7 @@ interface ProjectsboardProps {
   description: string;
   id?: string;
   websitelink?: string;
+  applink?: string;
 }
 
 const buttonScale = {
@@ -32,10 +33,11 @@ const Projectsboardlist: ProjectsboardProps[] = [
     description:
       "",
     websitelink: "https://www.voyaapp.co",
+    applink: "https://play.google.com/store/apps/details?id=com.hoarder.com&pcampaignid=web_share",
   },
   {
     id: "orthorus",
-    button: ["Product Design", "Design System", "Dashboard"],
+    button: ["Product Design", "Design System"],
     title: "ORTHORUS — Raise Capital & Run Investor Ops in One Platform",
     description:
       "",
@@ -47,6 +49,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     description:
       "",
     websitelink: "https://www.vyntapp.com",
+    applink:"https://play.google.com/store/apps/details?id=com.hoarder.com&pcampaignid=web_share"
   },
   {
     id: "creatorwire",
@@ -96,7 +99,7 @@ const ProjectBoard = () => {
 };
 
 const Projectsboard: FC<ProjectsboardProps> = (props) => {
-  const { button, title, description, id, websitelink } = props;
+  const { button, title, description, id, websitelink, applink} = props;
   return (
     <div className="flex flex-col mt-32 sm:mt-40">
       <div className="flex max-w-screen items-start">
@@ -105,7 +108,26 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
             {button.map((item, index) => (
               <button
                 key={index}
-                className="bg-[#CFCFCF] text-[#F6F6F6] rounded-full px-2 sm:px-3 py-1 text-xs font-medium"
+                className={`${id === "voya" && item === "Product Design"
+                  ? "bg-[#0E1930]"
+                  : id === "voya" && item === "Design System"
+                    ? "bg-[#237C79]"
+                    : id === "vynt" && item === "Product Design"
+                      ? "bg-[#52014F]"
+                      : id === "vynt" && item === "Design System"
+                        ? "bg-[#F9B205]"
+                        : id === "ajoin" && item === "Product Design"
+                          ? "bg-[#FF6934]"
+                          : id === "ajoin" && item === "Design System"
+                            ? "bg-[#4F0001]"
+                            : id === "reeka" && item === "Product Design"
+                              ? "bg-[#E36B37"
+                              : id === "reeka" && item === "Design System"
+                                ? "bg-[#782A08]"
+                                : id === "orthorus" && item === "Product Design"
+                                  ? "bg-[#FF3838]"
+                                  : "bg-[#CFCFCF]"
+                  } ${id === "vynt" && item === "Design System" ? "text-black" : "text-[#F6F6F6]"}  rounded-full px-2 sm:px-3 py-1 text-xs font-medium`}
               >
                 {item}
               </button>
@@ -123,19 +145,43 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
           >
             {description}
           </motion.div>
-          {(id === "creatorwire" || id === "vynt" || id === "voya") &&
-            websitelink && (
-              <Link
-                href={websitelink}
-                className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]"
-              >
-                <p>Visit Website</p>
-                <NorthEastIcon style={{ fontSize: 16 }} />
-              </Link>
-            )}
+          <div className="flex flex-row gap-2">
+            {(id === "creatorwire" || id === "vynt" || id === "voya") &&
+              websitelink && (
+                <Link
+                  href={websitelink}
+                  className="self-start flex flex-row gap-2 justify-center items-center h-10 w-32 text-sm border border-[#000000] rounded-full text-[#1E1E1E]"
+                >
+                  <p>Visit Website</p>
+                  <NorthEastIcon style={{ fontSize: 16 }} />
+                </Link>
+              )}
+              {/* App link */}
+            {(id === "vynt" || id === "voya") &&
+              applink && (
+                <Link
+                  href={applink}
+                  className="px-2 self-start flex flex-row gap-2 justify-center items-center h-10 w-auto text-sm border border-[#000000] rounded-full text-[#1E1E1E]"
+                >
+                  <p>Download App</p>
+                  <NorthEastIcon style={{ fontSize: 16 }} />
+                </Link>
+              )}
+            {/* {(id === "vynt" || id === "voya") &&
+              applink && (
+                <Link
+                  href={applink}
+                  className="px-2 self-start flex flex-row gap-2 justify-center items-center h-10 w-auto text-sm border border-[#000000] rounded-full text-[#1E1E1E]"
+                >
+                  <p>Download App</p>
+                  <NorthEastIcon style={{ fontSize: 16 }} />
+                </Link>
+              )} */}
+          </div>
+
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
