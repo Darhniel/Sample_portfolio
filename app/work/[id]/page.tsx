@@ -2,6 +2,7 @@
 import ProjectBoard from "@/components/projectsboard";
 import Navbar from "@/components/navbar";
 import Projectimages from "@/components/projectimages";
+import Contact from "@/components/contact";
 
 const Page = () => {
   //const params = useParams();
@@ -17,6 +18,7 @@ const Page = () => {
           <Projectimages />
         </div>
       </div>
+      <Contact/>
     </div>
 
   );
