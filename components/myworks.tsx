@@ -26,21 +26,21 @@ const Workslist: MyWorksProps[] = [
     id: "voya",
     image: "/voya.jpg",
     description: "Mobile App Design",
-    name: "VOYA",
+    name: "VOYA - SOLVING MOBILITY ISSUES IN AN EMERGING MARKET.",
     width: 484.68,
   },
   {
     id: "orthorus",
     image: "/orthorus.jpg",
     description: "Web App Design/Dashboard Design",
-    name: "Orthorus",
+    name: "Orthorus - Capital raising and investor ops, simplified.",
     width: 477,
   },
   {
     id: "vynt",
     image: "/vyntwork.jpg",
     description: "Mobile App Design",
-    name: "VYNT",
+    name: "VYNT - SAVING THE ENVIRONMENT THROUGH FASHION.",
     width: 484.68,
   },
   {
@@ -54,14 +54,14 @@ const Workslist: MyWorksProps[] = [
     id: "reeka",
     image: "/reeka.jpg",
     description: "Mobile App Design",
-    name: "Reeka",
+    name: "REEKA - Property Ops Made Simple.",
     width: 527.53,
   },
   {
     id: "ajoin",
     image: "/ajoin.jpg",
     description: "Mobile App Design",
-    name: "Ajoin",
+    name: "AJOIN - MAKING CITIES FUN AGAIN.",
     width: 484.68,
   },
   {
@@ -112,8 +112,8 @@ const MyWorks = () => {
                   <p className="text-[#808080] sm:text-sm text-xs font-normal">
                     {description}
                   </p>
-                  <p className="text-[#363636] font-medium sm:text-[20px]">
-                    {name}
+                  <p className="text-[#363636] font-medium sm:text-[18px]">
+                    {name.toUpperCase()}
                   </p>
                 </motion.div>
               </div>
