@@ -35,9 +35,23 @@ const Topbar = () => {
           {...fadeInUp}
           className="text-[#363636] md:w-[80%] text-sm leading-[1.2] sm:mt-5 mb-5"
         >
-          I partner with startup founders to bring their vision to life through
-          design that captivates users and attracts investors
+          I collaborate with visionary founders to craft user-centric products that not only delight, but also address meaningful real-world problems, securing investments through thoughtful, purpose-driven design
         </motion.p>
+        {/* Summary */}
+        <motion.div {...fadeInUp} className="flex flex-row gap-[24px] font-medium text-[32px] text-[#808080]">
+          <div>
+            <p className="">15+</p>
+            <p className="text-[16px] text-[#363636]">Founders worked with</p>
+          </div>
+          <div>
+            <p className="">20K+</p>
+            <p className="text-[16px] text-[#363636]"> Users using my product</p>
+          </div>
+          <div>
+            <p className="">$1,000,000</p>
+            <p className="text-[16px] text-[#363636]">Amount Raised</p>
+          </div>
+        </motion.div>
         <motion.div
           {...fadeInUp}
           whileHover={{
@@ -45,7 +59,7 @@ const Topbar = () => {
             transition: { duration: 0.3 },
             opacity: 0.8,
           }}
-          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-5 sm:py-3 px-6 py-2 rounded-4xl text-sm"
+          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-[45px] sm:py-3 px-6 py-2 rounded-4xl text-sm"
         >
           <a href="https://calendly.com/olojodaniel99/30min" target="_blank">
             Let&apos;s talk Design
