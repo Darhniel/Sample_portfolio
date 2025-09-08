@@ -121,13 +121,13 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
                           : id === "ajoin" && item === "Design System"
                             ? "bg-[#4F0001]"
                             : id === "reeka" && item === "Product Design"
-                              ? "bg-[#E36B37"
+                              ? "bg-[#E36B37]"
                               : id === "reeka" && item === "Design System"
                                 ? "bg-[#782A08]"
                                 : id === "orthorus" && item === "Product Design"
                                   ? "bg-[#FF3838]"
                                   : "bg-[#CFCFCF]"
-                  } ${id === "vynt" && item === "Design System" ? "text-black" : "text-[#F6F6F6]"}  rounded-full px-2 sm:px-3 py-1 text-xs font-medium`}
+                  } ${id === "vynt" && item === "Design System" ? "text-black" : "text-[#F6F6F6]"}  rounded-full px-2 sm:px-5 py-[10px] text-xs font-medium`}
               >
                 {item}
               </button>

@@ -40,7 +40,7 @@ const Images: ProjectImagesProps[] = [
   },
   {
     id: "vynt",
-    image: ["/vynt1.png", "/vynt2.png", "/vynt3.png", "/vynt4.png"],
+    image: ["/vynt4.png","/vynt3.png","/vynt2.png","/vynt1.png"],
   },
   {
     id: "creatorwire",
@@ -125,11 +125,6 @@ const projectTexts: {
           ]
         ],
       },
-      {
-        indexAfter: 4,
-        title: "",
-        text: ["One of the feature we have was to give in ride service feedback to help improve the quality of service rendered and also to get real time feedback ."],
-      },
     ],
 
   },
@@ -204,15 +199,15 @@ const projectTexts: {
         text: "My vision for this project was  to seamlessly integrate the community aspect with access to sports facilities and equipment. Users didn’t just want to book a court or rent gear, they wanted to meet up, join games, and feel part of something local and social.",
       },
     ],
-  //   extra: [
-  //     {
-  //       indexAfter: 2,
-  //       title: "The Solution",
-  //       text: [
-  //         "I solved this issue by merging the community and the sport facilities into one feature, so the user gets to interact with each other, easily access the sporting equipment at the facilities, and also use the facility itself."
-  //       ],
-  //     },
-  //   ],
+    //   extra: [
+    //     {
+    //       indexAfter: 2,
+    //       title: "The Solution",
+    //       text: [
+    //         "I solved this issue by merging the community and the sport facilities into one feature, so the user gets to interact with each other, easily access the sporting equipment at the facilities, and also use the facility itself."
+    //       ],
+    //     },
+    //   ],
   },
 
   reeka: {
@@ -456,49 +451,52 @@ const Projectpic = (props: ProjectImagesProps) => {
               <motion.div
                 {...imageUp}
                 className={`${id === "vynt" && "bg-[#BDBDBD]"} ${id === "creatorwire" && "max-h-[2647px]"
-                  } flex flex-col justify-center max-h-[843px] p-4 sm:p-8 md:min-w-[90%] rounded-xl bg-[#F5F5F580]`}
+                  }  p-4 sm:p-8 md:min-w-[90%] rounded-xl bg-[#F5F5F580]`}
               >
-                <div className="flex flex-row justify-center items-center">
-                  <Image
-                    width={1261.48}
-                    height={717}
-                    src={img}
-                    alt={`${id} Project Image`}
-                    style={{ objectFit: "inherit" }}
-                    className={`rounded-lg ${id === "creatorwire" && "w-[732px]"} ${id === "orthorus" && "w-[1057px]"
-                      } `}
-                  />
+                <div className="flex flex-col justify-center max-h-[900px]">
+                  <div className="flex flex-row justify-center items-center">
+                    <Image
+                      width={1261.48}
+                      height={717}
+                      src={img}
+                      alt={`${id} Project Image`}
+                      style={{ objectFit: "inherit" }}
+                      className={`rounded-lg ${id === "creatorwire" && "w-[732px]"} ${id === "orthorus" && "w-[1057px]"
+                        } ${id === "reeka" && "rounded-[16px] border-[0.5px] border-[#00000033]"}`}
+                    />
+                  </div>
+                  {texts && (() => {
+                    const blocks = [
+                      { title: texts.imagetext1, desc: texts.imagetext2 },
+                      { title: texts.imagetext3, desc: texts.imagetext4 },
+                      { title: texts.imagetext5, desc: texts.imagetext6 },
+                    ];
+
+                    // Filter out completely empty blocks
+                    const filledBlocks = blocks.filter(
+                      b => b.title?.trim() || b.desc?.trim()
+                    );
+
+                    return (
+                      <div
+                        className={`grid text-center mt-6 font-medium text-[#363636] text-[12px] gap-20 ${filledBlocks.length === 1
+                          ? "grid-cols-1 sm:w-[40%] mx-auto"
+                          : filledBlocks.length === 2
+                            ? "grid-cols-2 justify-center"
+                            : "grid-cols-3"
+                          }`}
+                      >
+                        {filledBlocks.map((b, i) => (
+                          <div key={i} className="flex flex-col w-4/5 mx-auto">
+                            <p>{b.title}</p>
+                            <p className="text-[#BBBBBB]">{b.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
                 </div>
-                {texts && (() => {
-                  const blocks = [
-                    { title: texts.imagetext1, desc: texts.imagetext2 },
-                    { title: texts.imagetext3, desc: texts.imagetext4 },
-                    { title: texts.imagetext5, desc: texts.imagetext6 },
-                  ];
 
-                  // Filter out completely empty blocks
-                  const filledBlocks = blocks.filter(
-                    b => b.title?.trim() || b.desc?.trim()
-                  );
-
-                  return (
-                    <div
-                      className={`pb-10 grid text-center mt-6 font-medium text-[#363636] text-[12px] gap-20 ${filledBlocks.length === 1
-                        ? "grid-cols-1 sm:w-[40%] mx-auto"
-                        : filledBlocks.length === 2
-                          ? "grid-cols-2 justify-center"
-                          : "grid-cols-3"
-                        }`}
-                    >
-                      {filledBlocks.map((b, i) => (
-                        <div key={i} className="flex flex-col w-4/5 mx-auto">
-                          <p>{b.title}</p>
-                          <p className="text-[#BBBBBB]">{b.desc}</p>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                })()}
 
 
               </motion.div>

@@ -16,7 +16,7 @@ const fadeInUp = {
 const Topbar = () => {
   return (
     <div className="mt-24">
-      <div className="flex flex-col justify-center items-center text-center w-11/12 sm:w-[90%] md:w-[80%] lg:w-[50%] m-auto mt-5">
+      <div className="flex flex-col justify-center items-center text-center w-11/12 sm:w-[90%] md:w-[80%] lg:w-[70%] m-auto mt-5">
         <motion.p
           {...namefadeInUp}
           className="text-3xl sm:text-5xl text-[#363636] font-semibold mt-12 tracking-[-0.03rem] sm:tracking-[-0.2rem]"
@@ -28,7 +28,7 @@ const Topbar = () => {
           {...fadeInUp}
           className="my-4 text-[#CFCFCF] text-2xl sm:text-6xl font-semibold tracking-[-0.03rem] sm:tracking-[-0.3rem] leading-6 sm:leading-16"
         >
-          PRODUCT DESIGNER & PITCH DECK DESIGNER
+          PRODUCT & PITCH DECK DESIGNER
         </motion.p>
 
         <motion.p
@@ -38,7 +38,7 @@ const Topbar = () => {
           I collaborate with visionary founders to craft user-centric products that not only delight, but also address meaningful real-world problems, securing investments through thoughtful, purpose-driven design
         </motion.p>
         {/* Summary */}
-        <motion.div {...fadeInUp} className="flex flex-row gap-[24px] font-medium text-[32px] text-[#808080]">
+        <motion.div {...fadeInUp} className="mt-8 flex flex-row gap-[24px] font-medium text-[32px] text-[#808080]">
           <div>
             <p className="">15+</p>
             <p className="text-[16px] text-[#363636]">Founders worked with</p>
@@ -59,7 +59,7 @@ const Topbar = () => {
             transition: { duration: 0.3 },
             opacity: 0.8,
           }}
-          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-[45px] sm:py-3 px-6 py-2 rounded-4xl text-sm"
+          className="flex justify-center items-center bg-[#363636] text-[#FAFAFA] sm:mt-[40px] sm:py-3 px-6 py-2 rounded-4xl text-sm"
         >
           <a href="https://calendly.com/olojodaniel99/30min" target="_blank">
             Let&apos;s talk Design

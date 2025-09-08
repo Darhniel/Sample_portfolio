@@ -53,7 +53,7 @@ const Workslist: MyWorksProps[] = [
   {
     id: "reeka",
     image: "/reeka.jpg",
-    description: "Mobile App Design",
+    description: "Web App Design",
     name: "REEKA - Property Ops Made Simple.",
     width: 527.53,
   },
@@ -97,7 +97,7 @@ const MyWorks = () => {
                 <motion.div
                   {...imageUp}
                   onClick={() => handleClick(id)}
-                  className=" flex justify-center items-center border-[0.5px] p-4 md:p-0 m-auto sm:w-auto md:w-[600px] md:h-[480px] border-[#CFCFCF] rounded-2xl"
+                  className=" flex justify-center items-center border-[0.5px] p-4 md:p-0 m-auto w-full md:h-[420px] border-[#CFCFCF] rounded-2xl"
                 >
                   <Image
                     src={image}
@@ -105,7 +105,7 @@ const MyWorks = () => {
                     width={width}
                     height={341}
                     style={{ objectFit: "inherit" }}
-                    className="sm:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
+                    className="max-w-[400px] lg:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
                   />
                 </motion.div>
                 <motion.div {...nameScale} className="flex flex-col">
