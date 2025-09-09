@@ -82,10 +82,10 @@ const MyWorks = () => {
     router.push(`/work/${lowerId}`);
   };
   return (
-    <div className="sm:pb-12 pb-9 lg:mx-19 m-auto w-[86%] lg:w-auto flex justify-center items-center">
+    <div className="sm:pb-12 pb-9 lg:mx-10 m-auto w-[90%] lg:w-auto flex justify-center items-center">
       <div className="">
         {/* i used a custom width */}
-        <div className=" w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-9 lg:-gap-x-10 lg:gap-y-5 mt-5">
+        <div className="w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-[60px] lg:-gap-x-10 lg:gap-y-9 mt-5">
           {Workslist.map((work, index) => {
             const { image, description, name, id, width } = work;
             return (

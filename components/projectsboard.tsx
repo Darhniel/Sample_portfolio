@@ -33,7 +33,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     description:
       "",
     websitelink: "https://www.voyaapp.co",
-    applink: "https://play.google.com/store/apps/details?id=com.hoarder.com&pcampaignid=web_share",
+    applink: "https://apps.apple.com/ng/app/voya/id6737156681",
   },
   {
     id: "orthorus",
@@ -49,7 +49,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     description:
       "",
     websitelink: "https://www.vyntapp.com",
-    applink:"https://play.google.com/store/apps/details?id=com.hoarder.com&pcampaignid=web_share"
+    applink:"https://apps.apple.com/ng/app/vynt/id6466212433"
   },
   {
     id: "creatorwire",
@@ -78,7 +78,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
   {
     id: "reekadeck",
     button: ["Deck Design", "Design System"],
-    title: "REEKA PITCH DECK",
+    title: "REEKA PITCH DECK ($10,000 RAISED) ",
     description:
       "Outlining the challenges faced by the real estate industry, presenting Reeka's solution to streamline property management and enhance tenant experience, and detailing Reeka's step-by-step implementation plan for these solutions.",
   },
