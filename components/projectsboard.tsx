@@ -1,10 +1,11 @@
 "use client";
 
 import { FC } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { MoveLeft } from 'lucide-react';
 interface ProjectsboardProps {
   button: string[];
   title: string;
@@ -49,7 +50,7 @@ const Projectsboardlist: ProjectsboardProps[] = [
     description:
       "",
     websitelink: "https://www.vyntapp.com",
-    applink:"https://apps.apple.com/ng/app/vynt/id6466212433"
+    applink: "https://apps.apple.com/ng/app/vynt/id6466212433"
   },
   {
     id: "creatorwire",
@@ -87,6 +88,9 @@ const ProjectBoard = () => {
   const params = useParams();
   const id = params?.id as string | undefined;
 
+
+
+
   const selectedProject = Projectsboardlist.find(
     (project) => project.id === id
   );
@@ -98,12 +102,20 @@ const ProjectBoard = () => {
   return <Projectsboard {...selectedProject} />;
 };
 
+
 const Projectsboard: FC<ProjectsboardProps> = (props) => {
-  const { button, title, description, id, websitelink, applink} = props;
+  const router = useRouter()
+
+  const goToWorks = () => {
+    router.push("/#work");
+  };
+  const { button, title, description, id, websitelink, applink } = props;
   return (
     <div className="flex flex-col mt-32 sm:mt-40">
       <div className="flex max-w-screen items-start">
         <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[52] gap-6 mx-5 sm:mx-0">
+          <button onClick={goToWorks}
+            className="flex justify-start sm:mb-[25px] text-[16px] text-[#808080] font-medium gap-[12px] cursor-pointer"><MoveLeft size={24} /> <span>Back</span></button>
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">
             {button.map((item, index) => (
               <button
@@ -156,7 +168,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
                   <NorthEastIcon style={{ fontSize: 16 }} />
                 </Link>
               )}
-              {/* App link */}
+            {/* App link */}
             {(id === "vynt" || id === "voya") &&
               applink && (
                 <Link

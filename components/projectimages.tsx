@@ -52,11 +52,9 @@ const Images: ProjectImagesProps[] = [
       "/reeka1.jpg",
       "/reeka2.jpg",
       "/reeka3.jpg",
-      "/reeka4.jpg",
-      "/reeka5.jpg",
       "/reeka6.jpg",
       "/reeka7.jpg",
-      "/reeka7.jpg",
+      "/reeka8.jpg",
     ],
   },
   {
