@@ -113,7 +113,7 @@ const Projectsboard: FC<ProjectsboardProps> = (props) => {
   return (
     <div className="flex flex-col mt-32 sm:mt-40">
       <div className="flex max-w-screen items-start">
-        <div className="flex flex-col lg:max-w-[60%] sm:ml-10 md:ml-9 lg:ml-[52] gap-6 mx-5 sm:mx-0">
+        <div className="flex flex-col  gap-6 mx-5 sm:mx-[80px]">
           <button onClick={goToWorks}
             className="flex justify-start sm:mb-[25px] text-[16px] text-[#808080] font-medium gap-[12px] cursor-pointer"><MoveLeft size={24} /> <span>Back</span></button>
           <motion.div {...buttonScale} className="flex flex-row gap-2 py-2">

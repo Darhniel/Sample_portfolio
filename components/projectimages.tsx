@@ -441,7 +441,7 @@ const Projectpic = (props: ProjectImagesProps) => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full">
-      <div className="flex flex-col gap-5 md:gap-8 px-5 sm:px-10 m-auto mt-12 mb-10 sm:mb-20 w-full">
+      <div className="flex flex-col gap-5 md:gap-8 px-5 sm:px-[80px] m-auto mt-12 mb-10 sm:mb-20 w-full">
         {image.map((img, index) => {
           const texts = Imagetext[id]?.[index]; //
           return (

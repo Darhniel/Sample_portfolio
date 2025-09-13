@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="bg-white w-full min-h-screen">
       <div className="max-w-[1600px] mx-auto">
-        <div className="bg-[#FAFAFA] pb-1 pt-5 font-inter mx-auto">
+        <div className="bg-[#FAFAFA] pt-5 font-inter mx-auto">
           <Navbar />
           <Topbar />
           <Workpage />
