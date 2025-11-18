@@ -88,9 +88,6 @@ const ProjectBoard = () => {
   const params = useParams();
   const id = params?.id as string | undefined;
 
-
-
-
   const selectedProject = Projectsboardlist.find(
     (project) => project.id === id
   );

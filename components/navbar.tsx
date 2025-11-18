@@ -12,9 +12,14 @@ const Navbar = () => {
 
   return (
     <div className=" w-full">
-      <div className="font-medium mx-[80px] text-sm flex flex-row justify-between items-center text-[#000000] rounded-4xl">
+      <div className="font-medium mx-2 sm:mx-[80px] text-sm flex flex-row justify-between items-center text-[#000000] rounded-4xl">
         <Link href={"/"} className="">
-          <Image src="/olojodaniellogo.png" alt="logo" width={180} height={70} />
+          <Image 
+            src="/olojodaniellogo.png" 
+            alt="logo" 
+            width={180} 
+            height={70} 
+          />
         </Link>
         <div className="h-10 w-36 rounded-4xl bg-[#363636] text-[#FAFAFA] border border-[#000000] text-center flex justify-center items-center">
           <a href="mailto:olojodaniel99@gmail.com" target="_blank">

@@ -83,7 +83,7 @@ const MyWorks = () => {
   };
   return (
     <div className="sm:pb-12 pb-9 lg:mx-10 m-auto w-[90%] lg:w-auto flex justify-center items-center">
-      <div className="">
+      <div className="w-full sm:w-auto">
         {/* i used a custom width */}
         <div className="w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-[60px] lg:-gap-x-10 lg:gap-y-9 mt-5">
           {Workslist.map((work, index) => {
@@ -105,7 +105,7 @@ const MyWorks = () => {
                     width={width}
                     height={341}
                     style={{ objectFit: "inherit" }}
-                    className="max-w-[400px] lg:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
+                    className="w-full max-w-[400px] lg:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
                   />
                 </motion.div>
                 <motion.div {...nameScale} className="flex flex-col">
