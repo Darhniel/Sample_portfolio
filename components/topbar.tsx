@@ -26,14 +26,14 @@ const Topbar = () => {
 
         <motion.p
           {...fadeInUp}
-          className="mt-4 text-[#CFCFCF] text-xl sm:text-6xl tracking-[-0.03rem] sm:tracking-[-0.3rem] leading-6 sm:leading-16"
+          className="mt-1 text-[#CFCFCF] text-xl sm:text-6xl tracking-[-0.03rem] sm:tracking-[-0.3rem] leading-6 sm:leading-16"
         >
           PRODUCT & PITCH DECK DESIGNER
         </motion.p>
 
         <motion.p
           {...fadeInUp}
-          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] mt-4 sm:mt-[32px] text-[10px] sm:text-base"
+          className="text-[#363636] md:w-[80%] text-sm leading-[1.2] mt-4 sm:mt-[32px] text-[12px] sm:text-base"
         >
           I collaborate with visionary founders to craft user-centric products that not only delight, but also address meaningful real-world problems, securing investments through thoughtful, purpose-driven design
         </motion.p>

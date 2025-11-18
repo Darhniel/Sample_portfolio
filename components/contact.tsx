@@ -10,8 +10,8 @@ const Contact = () => {
           CONTACT
         </p>
       </div> */}
-        <div className=" w-full flex flex-row justify-between items-center gap-2 font-semibold text-[10px] sm:text-[20px] mt-4 pb-2 uppercase text-[#F9FFFC] tracking-tight">
-          <div className="flex flex-row items-center gap-[16px]">
+        <div className=" w-full flex flex-row justify-between items-center gap-2 font-semibold text-[12px] sm:text-[20px] mt-4 pb-2 uppercase text-[#F9FFFC] tracking-tight">
+          <div className="flex flex-row items-center gap-1 sm:gap-[16px]">
             <Image 
               src="/mail.png" 
               alt="" 
@@ -30,7 +30,7 @@ const Contact = () => {
           </div>
 
           <Link 
-            className="flex flex-row items-center gap-[16px]" 
+            className="flex flex-row items-center gap-1 sm:gap-[16px]" 
             href="https://www.linkedin.com/in/ayomideolojo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           >
             <Image 

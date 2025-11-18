@@ -85,7 +85,7 @@ const MyWorks = () => {
     <div className="sm:pb-12 pb-9 lg:mx-10 m-auto w-[90%] lg:w-auto flex justify-center items-center">
       <div className="w-full sm:w-auto">
         {/* i used a custom width */}
-        <div className="w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-[60px] lg:-gap-x-10 lg:gap-y-9 mt-5">
+        <div className="w-full m-auto flex flex-col justify-center items-center custom1:grid custom1:grid-cols-1 custom2:grid-cols-2  gap-8 lg:-gap-x-10 lg:gap-y-9 mt-5">
           {Workslist.map((work, index) => {
             const { image, description, name, id, width } = work;
             return (
@@ -108,7 +108,7 @@ const MyWorks = () => {
                     className="w-full max-w-[400px] lg:max-w-[500px] sm:max-h-[341px] cursor-pointer  "
                   />
                 </motion.div>
-                <motion.div {...nameScale} className="flex flex-col">
+                <motion.div {...nameScale} className="flex flex-col gap-2">
                   <p className="text-[#808080] sm:text-sm text-xs font-normal">
                     {description}
                   </p>
