@@ -1244,7 +1244,7 @@ const MainSection: React.FC<MainSectionProps> = ({ sectionContent }) => (
           {section.text.split("\n\n").map((para, i) => (
             <p
               key={i}
-              className="text-[#BBBBBB] font-medium text-[10px] sm:text-[20px] tracking-[-0.0024em]"
+              className="text-[#BBBBBB] font-medium text-[12px] sm:text-[20px] tracking-[-0.0024em]"
             >
               {para}
             </p>
@@ -1287,7 +1287,7 @@ const ExtraSection: React.FC<ExtraSectionProps> = ({ id, index, sectionContent }
             typeof block === "string" ? (
               <p
                 key={j}
-                className="text-[#BBBBBB] font-medium text-[10px] sm:text-[20px] tracking-[-0.0024em]"
+                className="text-[#BBBBBB] font-medium text-[12px] sm:text-[20px] tracking-[-0.0024em]"
               >
                 {block}
               </p>
@@ -1334,7 +1334,7 @@ const VoyaExtra: React.FC<VoyaExtraProps> = ({ items }) => {
         {arrayItems.map((arr, i) => (
           <ul
             key={i}
-            className="list-disc text-[#BBBBBB] font-medium text-[10px] sm:text-[20px] tracking-[-0.0024em] ml-5 space-y-2"
+            className="list-disc text-[#BBBBBB] font-medium text-[12px] sm:text-[20px] tracking-[-0.0024em] ml-5 space-y-2"
           >
             {arr.map((item, k) => (
               <li key={k}>{item}</li>
@@ -1367,7 +1367,7 @@ const VyntExtraOne: React.FC<VyntExtraOneProps> = ({ items }) => {
             typeof block === "string" ? (
               <p
                 key={j}
-                className="text-[#BBBBBB] font-medium text-[10px] md:text-[20px] tracking-[-0.0024em] flex-1"
+                className="text-[#BBBBBB] font-medium text-[12px] md:text-[20px] tracking-[-0.0024em] flex-1"
               >
                 {block}
               </p>
